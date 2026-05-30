@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maglo</title>
+    <link rel="stylesheet" href="../src/input.css">
+    <link rel="stylesheet" href="../src/output.css">
+    <script src="../Scripts/index.js" defer></script>
+</head>
+
+<body class="font-Kumbh relative">
+    <section id="login-section" class="flex items-center justify-center bg-white md:grid md:grid-cols-2 overflow-hidden max-w-full w-full md:pl-33.75">
+        <div class="max-w-full overflow-hidden" id="login-form-container">
+            <div id="brand-header" class="md:mt-10 md:mb-32 mt-14 mb-10">
+                <img id="brand-logo" class="inline-block" src="../Images/Exclude.png" alt="brand-logo">
+                <span class="text-text-1 font-bold text-[18px] ml-3">Maglo.</span>
+            </div>
+
+            <h1 id="login-title" class="font-semibold mb-2 text-3xl text-text-1 font-Kumbh">Welcome Back</h1>
+            <p id="login-description" class="text-text-3 text-left text-[16px] mb-6">Welcome Back! Please enter your details</p>
+            <form id="login-form" action="" class="max-w-100  md:mb-48 mb-24 w-full">
+                <div id="email-input-group" class="flex flex-col mb-4">
+                    <label for="email" id="email-label" class="text-text-1 text-[14px] mb-2.5">Email</label>
+                    <input type="email" id="email" placeholder="Enter you email"
+                        class="border border-gray-5 outline-0 pl-5 pr-6 py-4 rounded-[10px] placeholder:text-text-3 placeholder:text-[14px]">
+                </div>
+
+                <div id="password-input-group" class="flex flex-col">
+                    <label for="password" id="password-label" class="text-text-1 text-[14px] mb-2.5">Password</label>
+                    <input type="password" id="password" placeholder="........"
+                        class="border border-gray-5 outline-0 pl-5 pr-6 py-4 rounded-[10px] placeholder:text-text-3 placeholder:text-[30px] placeholder:font-bold">
+                </div>
+
+                <div id="remember-forgot-container" class="flex justify-between mt-5">
+                    <div id="remember-me-group" class="flex items-center">
+                        <input type="checkbox" id="remember-me-checkbox" class="border outline-0 border-text-2 inline-block w-4 h-4 rounded-[3px]">
+                        <label for="remember-me-checkbox" id="remember-me-label" class="text-text-1 text-[14px] ml-2.25 ">Remember for 30 Days</label>
+                    </div>
+
+                    <a id="forgot-password-link" href="#" class="text-[14px] text-text-1">Forgot Password?</a>
+                </div>
+
+                <input id="signin-button" class="bg-primary rounded-[10px] w-full text-text-1 px-5 py-3.5 mt-6" type="submit" value="Sign in">
+                <button id="google-signin-button" class="border border-gray-5 rounded-[10px] w-full text-text-1 px-5 py-3.5 mt-4">
+                    <img id="google-logo" src="../Images/google (1).png" alt="Google Logo" class="inline-block mr-2">
+                    Sign in with Google
+                </button>
+
+                <p id="signup-prompt" class="text-[14px] text-text-2 text-center mt-6">Don't have an account? <span><a id="signup-link" href="#" class="text-[14px] text-text-1">Sign up for free</a></span></p>
+            </form>
+        </div>
+
+
+        <div id="onboard-image-container" class="w-full h-full overflow-hidden hidden lg:block">
+            <img id="onboard-image" src="../Images/Onboard Image.png" alt="onboard-image" class="w-full h-full">
+        </div>
+
+
+    </section>
+    <div id="overlay" class=" bg-black/50 absolute top-0 left-0 right-0 bottom-0 hidden"></div>
+    <div id="error-modal">
+        <p id="error-message" class="absolute top-[20%] left-1/2 -translate-x-1/2 bg-white p-7 text-red-500 z-1000 hidden">🛑 Please enter a valid email and password</p>
+    </div>
+</body>
+
+</html>

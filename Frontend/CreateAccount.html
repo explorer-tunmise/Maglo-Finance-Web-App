@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="../src/input.css">
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+
+<body class="font-Kumbh">
+    <section id="signup-section" class="flex items-center justify-center bg-white md:grid md:grid-cols-2 overflow-hidden max-w-full w-full md:pl-33.75">
+        <div class="max-w-full overflow-hidden" id="signup-form-container">
+            <div id="brand-header" class="md:mt-10 md:mb-32 mt-14 mb-10">
+                <img id="brand-logo" class="inline-block" src="../Images/Exclude.png" alt="brand-logo">
+                <span class="text-text-1 font-bold text-[18px] ml-3">Maglo.</span>
+            </div>
+
+            <h1 id="signup-title" class="font-semibold mb-2 text-3xl text-text-1 font-Kumbh">Create new account</h1>
+            <p id="signup-description" class="text-text-3 text-left text-[16px] mb-6">Welcome! Please enter your details</p>
+            <form id="signup-form" action="" class="max-w-100  md:mb-48 mb-24 w-full">
+                <div id="fullname-input-group" class="flex flex-col mb-4">
+                    <label for="full-name" id="fullname-label" class="text-text-1 text-[14px] mb-2.5">Full Name</label>
+                    <input type="text" id="full-name" placeholder="Mahfuzul Nabil"
+                        class="border border-gray-5 outline-0 pl-5 pr-6 py-4 rounded-[10px] placeholder:text-text-3 placeholder:text-[14px]">
+                </div>
+
+                <div id="email-input-group" class="flex flex-col mb-4">
+                    <label for="email" id="email-label" class="text-text-1 text-[14px] mb-2.5">Email</label>
+                    <input type="email" id="email" placeholder="example@gmail.com"
+                        class="border border-gray-5 outline-0 pl-5 pr-6 py-4 rounded-[10px] placeholder:text-text-3 placeholder:text-[14px]">
+                </div>
+
+                <div id="password-input-group" class="flex flex-col mb-1.25">
+                    <label for="password" id="password-label" class="text-text-1 text-[14px] mb-2.5">Password</label>
+                    <input type="password" id="password" placeholder="........"
+                        class="border border-gray-5 outline-0 pl-5 pr-6 py-4 rounded-[10px] placeholder:text-text-3 placeholder:text-[30px] placeholder:font-bold">
+                </div>
+
+
+                <button id="create-account-button" class="bg-primary rounded-[10px] w-full text-text-1 px-5 py-3.5 mt-6">Create Account</button>
+                <button id="google-signup-button" class="border border-gray-5 rounded-[10px] w-full text-text-1 px-5 py-3.5 mt-4">
+                    <img id="google-logo" src="../Images/google (1).png" alt="Google Logo" class="inline-block mr-2">
+                    Sign up with Google
+                </button>
+
+                <p id="signin-prompt" class="text-[14px] text-text-2 text-center mt-6">Already have an account? <span><a id="signin-link" href="#" class="text-[14px] text-text-1">Sign in</a></span></p>
+            </form>
+        </div>
+
+
+        <div id="onboard-image-container" class="w-full h-full overflow-hidden hidden lg:block">
+            <img id="onboard-image" src="../Images/Onboard Image.png" alt="onboard-image" class="w-full h-full">
+        </div>
+    </section>
+</body>
+
+</html>

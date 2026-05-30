@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../src/input.css">
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+</head>
+
+<body class="font-Kumbh">
+    <header id="header" class="fixed top-0 left-62.5 right-0 bg-white">
+        <nav id="top-nav" class="pt-7.5 px-10 flex items-center justify-between">
+            <p class="text-text-1 font-semibold text-[25px]">Dashboard</p>
+            <div class="flex items-center gap-11.25">
+                <button>
+                    <i class="ph ph-magnifying-glass text-2xl text-text-2"></i>
+                </button>
+                <button>
+                    <i class="ph-fill ph-bell text-2xl text-text-2"></i>
+                </button>
+
+                <div class="max-w-53.75 w-full flex rounded-[100px] pl-2.75 pr-3.75 py-1.5 bg-gray-1 items-center">
+                    <img class="w-9 h-9 rounded-full" src="../Images/About DP.jpeg" alt="profile-pic">
+                    <span class="text-text-1 text-[14px] font-semibold ml-3">John Doe</span>
+                    <button class="ml-7">
+                        <i class="ph-fill ph-caret-down text-[17px] text-text-1"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="sidebar"
+        class="bg-gray-1 w-full px-6.25 pt-7.5  max-w-62.5 fixed top-0 left-0 flex flex-col items-start bottom-0">
+        <div id="brand-header">
+            <img id="brand-logo" class="inline-block" src="../Images/Exclude.png" alt="brand-logo">
+            <span class="text-text-1 font-bold text-[18px] ml-3">Maglo.</span>
+        </div>
+
+        <nav id="main-nav" class="mt-10 w-full flex flex-col justify-between h-full">
+            <ul id="primary-nav-list" class="flex flex-col">
+                <li id="dashboard-nav-item"
+                    class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2"><i
+                        class="ph-fill ph-house-line text-[20px] text-text-2"></i><a id="dashboard-link"
+                        href="#">Dashboard</a></li>
+                <li id="transactions-nav-item"
+                    class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2"><i
+                        class="ph-fill ph-chart-line text-[20px] text-text-2"></i><a id="transactions-link"
+                        href="#">Transactions</a></li>
+                <li id="transactions-nav-item"
+                    class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2"><i
+                        class="ph-fill ph-invoice text-[20px] text-text-2"></i><a id="transactions-link"
+                        href="#">Invoices</a></li>
+                <li id="transactions-nav-item"
+                    class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2"><i
+                        class="ph-fill ph-wallet text-[20px] text-text-2"></i><a id="transactions-link" href="#">My
+                        Wallets</a></li>
+                <li id="transactions-nav-item"
+                    class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2"><i
+                        class="ph-fill ph-gear text-[20px] text-text-2"></i><a id="transactions-link"
+                        href="#">Settings</a></li>
+
+            </ul>
+
+            <ul id="secondary-nav-list">
+                <li id="help-nav-item" class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2">
+                    <i class="ph-fill ph-sign-out"></i><a id="help-link" href="#">Help</a>
+                </li>
+                <li id="logout-nav-item"
+                    class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2"><i
+                        class="ph-fill ph-info"></i><a id="logout-link" href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main id="main-content" class="grid grid-cols-[2fr_1fr] ml-62.5 mt-20 gap-6 px-6 py-7.5">
+
+        <section id="balance-overview" class="flex flex-col gap-7.5">
+            <div class="flex gap-6.25">
+                <div class="px-5 py-6 flex gap-3.75 items-center rounded-[10px] bg-[#363A3F] min-w-55.5 w-full">
+                    <div class="w-10.5 h-10.5 rounded-full flex items-center justify-center bg-[#4E5257]">
+                        <i class="ph-fill ph-wallet text-[16px] text-primary"></i>
+                    </div>
+
+                    <div class="flex flex-col gap-2.5">
+                        <p class="text-[14px] text-[#929EAE] font-normal">Total balance</p>
+                        <span class="text-2xl text-white font-bold inline-flex items-center"><i
+                                class="ph ph-currency-ngn"></i>0.00</span>
+                    </div>
+                </div>
+
+                <div class="px-5 py-6 flex gap-3.75 items-center rounded-[10px] bg-gray-2 min-w-55.5 w-full">
+                    <div class="w-10.5 h-10.5 rounded-full flex items-center justify-center bg-[#EBE8E8]">
+                        <i class="ph-fill ph-wallet text-[16px] text-[#363A3F]"></i>
+                    </div>
+
+                    <div class="flex flex-col gap-2.5">
+                        <p class="text-[14px] text-text-2 font-normal">Total spending</p>
+                        <span class="text-2xl text-text-1 font-bold"><i class="ph ph-currency-ngn"></i>0.00</span>
+                    </div>
+                </div>
+
+                <div class="px-5 py-6 flex gap-3.75 items-center rounded-[10px] bg-gray-2 min-w-55.5 w-full">
+                    <div class="w-10.5 h-10.5 rounded-full flex items-center justify-center bg-[#EBE8E8]">
+                        <i class="ph-fill ph-wallet text-[16px] text-[#363A3F]"></i>
+                    </div>
+
+                    <div class="flex flex-col gap-2.5">
+                        <p class="text-[14px] text-text-2 font-normal">Total saved</p>
+                        <span class="text-2xl text-text-1 font-bold"><i class="ph ph-currency-ngn"></i>0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full border border-gray-3 rounded-[10px] px-6 pt-3.75 pb-5.25">
+                <div class="flex items-center justify-between w-full">
+                    <p class="text-[18px] text-text-1 font-semibold">Working Capital</p>
+
+                    <div class="flex items-center gap-18">
+                        <div class=" flex gap-7.5">
+                            <div class="flex items-center gap-2.25">
+                                <span class="inline-flex h-2 w-2 rounded-full bg-secondary"></span>
+                                <p class="text-[12px] font-normal text-text-1">Income</p>
+                            </div>
+                            <div class="flex items-center gap-2.25">
+                                <span class="inline-flex h-2 w-2 rounded-full bg-primary"></span>
+                                <p class="text-[12px] font-normal text-text-1">Expenses</p>
+                            </div>
+                        </div>
+
+                        <select name="timeline" id="timeline-filter" class="bg-gray-2 py-1.5 pl-2.5 pr-2 outline-0">
+                            <option value="7-days" class="text-[12px] text-text-1 font-normal">Last 7 days</option>
+                            <option value="week" class="text-[12px] text-text-1 font-normal">Last week</option>
+                            <option value="month" class="text-[12px] text-text-1 font-normal">Last month</option>
+                        </select>
+                    </div>
+
+
+                </div>
+
+                <!-- Simple SVG Placeholder -->
+                <div
+                    class="w-full h-80 bg-gray-2 rounded-[10px] flex items-center justify-center border border-gray-3 mt-8">
+                    <svg class="w-3/4 h-3/4 text-gray-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="w-full border border-gray-3 rounded-[10px] py-5 pl-6.25 pr-4.75">
+                <div class="flex items-center justify-between w-full">
+                    <p class="text-[18px] text-text-1 font-semibold">Recent Transaction</p>
+                    <button class="text-secondary text-[14px] font-semibold flex items-center">View all
+                        <i class="ph ph-caret-right text-[14px] text-secondary font-semibold"></i>
+                    </button>
+                </div>
+
+                <table class="w-full mt-5">
+                    <thead>
+                        <tr class="text-left text-text-2 text-[12px] font-normal border-b border-gray-3 mt-5">
+                            <th class="pb-3 font-semibold text-[12px] text-text-2">NAME/BUSINESS</th>
+                            <th class="pb-3 font-semibold text-[12px] text-text-2">TYPE</th>
+                            <th class="pb-3 font-semibold text-[12px] text-text-2">AMOUNT</th>
+                            <th class="pb-3 font-semibold text-[12px] text-text-2">DATE</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </section>
+
+
+        <div class="">
+            <div class="flex items-center justify-between w-full">
+                <p class="text-[18px] text-text-1 font-semibold">Wallet</p>
+                <button class="bg-white">
+                    <i class="ph ph-dots-three text-[24px] text-[#929EAE] font-extrabold"></i>
+                </button>
+            </div>
+
+            <div class="w-full max-w-full rounded-[10px]  h-full relative">
+                <div class="rounded-[15px] max-h-52.5 h-full bg-linear-to-r from-[#4A4A49] to-[#20201F]">
+                    <div class="flex px-7.5 pt-4.5 items-center gap-2">
+                        <p class="text-[16px] text-white font-bold">Maglo.</p>
+                      <div class="w-px h-5 bg-[#626261]"></div>
+                        <p class="font-medium text-[12px] text-[#626260]">Universal Bank</p>
+                    </div>
+
+                    <div class="flex justify-between items-center pt-4 px-7.5">
+                        <img src="../Images/ATM Chip.png" alt="chip">
+                        <span><i class="ph ph-contactless-payment text-[40px] text-[#363B41]"></i></span>
+                    </div>
+
+                    <pre class="text-white font-bold text-[20px] pl-7.5 mt-4">xxxx xxxx xxxx xxxx</pre>
+
+                    <div class="flex items-start justify-between px-7.5 mt-2">
+                     <p class="font-medium text-[#868685] text-[14px]">04/25</p>
+                     <img src="../Images/International.png" alt="mastercard">
+                    </div>
+                </div>
+
+               <div class="rounded-[15px] max-h-42 h-full bg-black/40 absolute  right-0 w-full left-0">
+                    <div class="flex px-7.5 pt-4.5 items-center gap-2">
+                        <p class="text-[16px] text-white font-bold">Maglo.</p>
+                      <div class="w-px h-5 bg-[#626261]"></div>
+                        <p class="font-medium text-[12px] text-[#626260]">Universal Bank</p>
+                    </div>
+
+                    <div class="flex justify-between items-center pt-4 px-7.5">
+                        <img src="../Images/ATM Chip.png" alt="chip">
+                        <span><i class="ph ph-contactless-payment text-[40px] text-[#363B41]"></i></span>
+                    </div>
+
+                    <pre class="text-white font-bold text-[20px] pl-7.5 mt-4">xxxx xxxx xxxx xxxx</pre>
+
+                    <div class="flex items-start justify-between px-7.5 mt-2">
+                     <p class="font-medium text-[#868685] text-[14px]">04/25</p>
+                     <img src="../Images/International.png" alt="mastercard">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

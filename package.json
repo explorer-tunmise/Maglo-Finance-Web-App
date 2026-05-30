@@ -1,0 +1,25 @@
+{
+  "name": "maglo-finance-web-app",
+  "version": "1.0.0",
+  "description": "Finance tracking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "prettier": "npx prettier --write **/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/explorer-tunmise/Maglo-Finance-Web-App.git"
+  },
+  "author": "Tunmise Adewole",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/explorer-tunmise/Maglo-Finance-Web-App/issues"
+  },
+  "homepage": "https://github.com/explorer-tunmise/Maglo-Finance-Web-App#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "tailwindcss": "^4.2.4"
+  }
+}
