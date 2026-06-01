@@ -20,11 +20,11 @@
 
             <h1 id="login-title" class="font-semibold mb-2 text-3xl text-text-1 font-Kumbh">Welcome Back</h1>
             <p id="login-description" class="text-text-3 text-left text-[16px] mb-6">Welcome Back! Please enter your details</p>
-            <form id="login-form" action="" class="max-w-100  md:mb-48 mb-24 w-full">
+            <form id="login-form" onsubmit="login()" class="max-w-100  md:mb-48 mb-24 w-full">
                 <div id="email-input-group" class="flex flex-col mb-4">
                     <label for="email" id="email-label" class="text-text-1 text-[14px] mb-2.5">Email</label>
                     <input type="email" id="email" placeholder="Enter you email"
-                        class="border border-gray-5 outline-0 pl-5 pr-6 py-4 rounded-[10px] placeholder:text-text-3 placeholder:text-[14px]">
+                       required class="border border-gray-5 outline-0 pl-5 pr-6 py-4 rounded-[10px] placeholder:text-text-3 placeholder:text-[14px]">
                 </div>
 
                 <div id="password-input-group" class="flex flex-col">
@@ -43,6 +43,7 @@
                 </div>
 
                 <input id="signin-button" class="bg-primary rounded-[10px] w-full text-text-1 px-5 py-3.5 mt-6" type="submit" value="Sign in">
+
                 <button id="google-signin-button" class="border border-gray-5 rounded-[10px] w-full text-text-1 px-5 py-3.5 mt-4">
                     <img id="google-logo" src="../Images/google (1).png" alt="Google Logo" class="inline-block mr-2">
                     Sign in with Google
