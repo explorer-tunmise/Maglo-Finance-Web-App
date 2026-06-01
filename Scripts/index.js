@@ -27,29 +27,39 @@ const form = document.getElementById("login-form");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const signIn = document.getElementById("signin-button");
+const emailError = document.getElementById("email-error");
+const passwordError = document.getElementById("password-error");
 
 function login() {
-  users.find((user) => {
-    if (
-      email.value === "" ||
-      !email.value.includes("@") ||
-      !email.value.includes(".com")
-    ) {
-      alert("Please enter a valid email address.");
-    }
+  if (
+    email.value === "" ||
+    !email.value.includes("@") ||
+    !email.value.includes(".com")
+  ) {
+    emailError.textContent = "Please enter a valid email address.";
+    emailError.classList.remove("hidden");
+  } else {
+    emailError.classList.add("hidden");
+  }
 
-    if (password.value === "" || password.value.length < 8) {
-      alert(
-        "Please enter a valid password. Password must be at least 8 characters long.",
-      );
-    }
+  if (password.value === "" || password.value.length < 8) {
+    passwordError.textContent = "Password must be at least 8 characters long.";
+    passwordError.classList.remove("hidden");
+  } else {
+    passwordError.classList.add("hidden");
+  }
 
-    if (email.value === user.email && password.value === user.password) {
-      alert("Login successful! Welcome, " + user.name + "!");
-      // Redirect to the dashboard or home page
-      window.location.href = "Dashboard.html";
-    } else {
-      alert("Invalid email or password. Please try again.");
-    }
-  });
+  let user = users.find(
+    (user) => user.email === email.value && user.password === password.value,
+  );
+  if (user) {
+    alert("Login successful! Welcome, " + user.name + "!");
+    // Redirect to the dashboard or home page
+    window.location.href = "Dashboard.html";
+  }
 }
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+  login(); // Call the login function to handle the login logic
+});
