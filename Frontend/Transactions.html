@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../src/input.css">
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+</head>
+
+<body class="font-Kumbh">
+    <header id="header" class="fixed top-0 left-62.5 right-0 bg-white z-1000">
+        <nav id="top-nav" class="pt-7.5 px-10 flex items-center justify-between">
+            <p class="text-text-1 font-semibold text-[25px]">Transactions</p>
+            <div class="flex items-center gap-11.25">
+                <button id="search-button">
+                    <i class="ph ph-magnifying-glass text-2xl text-text-2"></i>
+                </button>
+                <button id="notification-button">
+                    <i class="ph-fill ph-bell text-2xl text-text-2"></i>
+                </button>
+
+                <div id="profile-menu"
+                    class="max-w-53.75 w-full flex rounded-[100px] pl-2.75 pr-3.75 py-1.5 bg-gray-1 items-center">
+                    <img class="w-9 h-9 rounded-full" src="../Images/About DP.jpeg" alt="profile-pic">
+                    <span class="text-text-1 text-[14px] font-semibold ml-3">John Doe</span>
+                    <button id="profile-dropdown-toggle" class="ml-7">
+                        <i class="ph-fill ph-caret-down text-[17px] text-text-1"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <div id="sidebar"
+        class="bg-gray-1 w-full px-6.25 pt-7.5  max-w-62.5 fixed top-0 left-0 flex flex-col items-start bottom-0">
+        <div id="brand-header">
+            <img id="brand-logo" class="inline-block" src="../Images/Exclude.png" alt="brand-logo">
+            <span class="text-text-1 font-bold text-[18px] ml-3">Maglo.</span>
+        </div>
+
+        <nav id="main-nav" class="mt-10 w-full flex flex-col justify-between h-full">
+            <ul id="primary-nav-list" class="flex flex-col">
+                <li id="dashboard-nav-item"
+                    class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2"><i
+                        class="ph-fill ph-house-line text-[20px] text-text-2"></i><a id="dashboard-link"
+                        href="#">Dashboard</a></li>
+                <li id="transactions-nav-item"
+                    class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2"><i
+                        class="ph-fill ph-chart-line text-[20px] text-text-2"></i><a id="transactions-link"
+                        href="#">Transactions</a></li>
+                <li id="transactions-nav-item"
+                    class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2"><i
+                        class="ph-fill ph-invoice text-[20px] text-text-2"></i><a id="transactions-link"
+                        href="#">Invoices</a></li>
+                <li id="transactions-nav-item"
+                    class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2"><i
+                        class="ph-fill ph-wallet text-[20px] text-text-2"></i><a id="transactions-link" href="#">My
+                        Wallets</a></li>
+                <li id="transactions-nav-item"
+                    class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2"><i
+                        class="ph-fill ph-gear text-[20px] text-text-2"></i><a id="transactions-link"
+                        href="#">Settings</a></li>
+
+            </ul>
+
+            <ul id="secondary-nav-list">
+                <li id="help-nav-item" class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2">
+                    <i class="ph-fill ph-sign-out"></i><a id="help-link" href="#">Help</a>
+                </li>
+                <li id="logout-nav-item"
+                    class="pl-3.75 pr-20.25 py-3.5 flex gap-3 items-center text-[14px] text-text-2"><i
+                        class="ph-fill ph-info"></i><a id="logout-link" href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main id="main-content" class="ml-62.5 mt-20 px-6 py-5">
+        <input type="search" id="search-input" class="max-w-83.75 w-full bg-gray-2 rounded-[15px] py-3 pl-[15px] pr-[70px] placeholder:text-[14px] placeholder:text-text-2" placeholder="Search anything on Transactions" />
+    </main>
+</body>
+
+</html>
