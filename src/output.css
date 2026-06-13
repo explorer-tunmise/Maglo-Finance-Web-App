@@ -21,8 +21,6 @@
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     --blur-sm: 8px;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-Kumbh: "Kumbh Sans", sans-serif;
@@ -114,7 +112,7 @@
   }
   img, svg, video, canvas, audio, iframe, embed, object {
     display: block;
-    /* vertical-align: middle; */
+    vertical-align: middle;
   }
   img, video {
     max-width: 100%;
